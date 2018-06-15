@@ -62,7 +62,10 @@
                 }
             }));
         };
-
+        navigator.GetUserMedia = ( navigator.getUserMedia ||
+                       navigator.webkitGetUserMedia ||
+                       navigator.mozGetUserMedia ||
+                       navigator.msGetUserMedia);
         // 获取本地音频和视频流
         navigator.GetUserMedia({
             "audio": true,
