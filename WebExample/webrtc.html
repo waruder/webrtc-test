@@ -24,7 +24,7 @@
         };
 
         // 创建PeerConnection实例 (参数为null则没有iceserver，即使没有stunserver和turnserver，仍可在局域网下通讯)
-        var pc = new webkitRTCPeerConnection(iceServer);
+        var pc = new RTCPeerConnection(iceServer);
 
         // 发送ICE候选到其他客户端
         pc.onicecandidate = function(event){
